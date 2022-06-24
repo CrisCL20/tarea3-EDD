@@ -1,0 +1,72 @@
+START
+              ---LA GRAN AVENTURA DEL CALABOZO BABOSO---
+Despiertas en un calabozo inmundo. A tu derecha ves a Ton, el duende escualido que
+te ha acompanado por los ultimos meses en tu aventura. A tu izquierda ves el porton de la 
+celda y a un guardia con cabeza de zapallo. Tu unica opcion es interactuar con el.
+-
+1
+Interactuar con el guardia
+"Silencio, bobo", te dice el guardia, sin mirarte. Le respondes "dejame salir, cabeza de zapallo!".
+Esta estrategia no parece dar fruto. Encuentras una piedra en el suelo y se la tiras. La piedra atraviesa
+su gran cabeza de zapallo, desperdigando deliciosas semillas de zapallo por doquier. Entre las semillas
+encuentras la llave de la celda. Abres la puerta y notas una bifurcacion en el camino.
+-
+2
+Ir por el camino estrecho de la derecha
+Decides ir por el camino estrecho. Despues de unos minutos de caminar junto a Ton, entran a una habitacion 
+con decoraciones de muy mal gusto. Hay demasiados cojines en el sofa, y sobre cada mueble hay un sin fin de 
+estatuillas duendes ejerciendo labores que no tienen sentido practico en el siglo 21. Habiendo cruzado la sala
+de estar, pasan por una puerta que los lleva a una habitacion mucho mas acogedora. Decides tomarte un descanso
+y reposas tu cuerpo en la cama. Antes de quedarte dormido, escoges que tipo de sueno quieres tener...
+-
+2
+Ir por el camino amplio de la izquierda
+Decides ir por el camino amplio. A medida en que caminas junto a Ton, te vas dando cuenta de que el camino
+se vuelve cada vez mas amplio. Caminan por horas y horas y las murallas no vuelven a converger. 
+Tras caminar por 6 meses, 23 dias, 18 horas y 36 minutos, llegan a la conclusion de que quizas este no 
+era el camino correcto. Pese a esto, continuan caminando... Y nunca dejan de caminar...
+GAMEOVER
+-
+3
+Sueno de navegar
+Suenas que eres un barco surcando por el oceano atlantico de noche. Si bien es muy divertido ser un barco, te distrae
+mucho el hecho de que haya tanta gente pisando tus interiores. Ademas, el agua esta muy fria. No puedes evitar
+pensar que hubiese sido mucho mejor sonar otra cosa. De repente, vez la punta de un iceberg. ERES EL TITANIC.
+GAMEOVER
+-
+3
+Sueno de volar
+Suenas que eres un aguilucho volando por los aires de Buenos Aires. "Se llama Buenos Aires, pero estos
+aires no tienen nada de bueno!" piensas mientras cruzas una nube de smog. Desde lo alto vislumbras un guiso
+de gusanos, cuyos gusanos gusanean tratando de escapar del calor de la cocina. Despiertas y estas devuelta en
+el calabozo, con mas hambre que nunca. Revisas tu bolsillo y encuentras un filet mignon. 
+"Soy alergico al mignon!" exclamas. Determinado a encontrar una comida que tu cuerpo pueda
+procesar, ves que caminos quedan por tomar.
+-
+3
+Sueno recursivo
+Suenas que suenas que suenas que suenas que suenas que suenas que suenas
+Suenas que suenas que suenas que suenas que suenas que suenas que suenas
+Suenas que suenas que suenas que suenas que suenas que suenas que suenas
+OH NO, al dios del sueno se le olvido escribir un caso de terminacion!
+Suenas que suenas que suenas que suenas que suenas que suenas que suenas
+Suenas que suenas que suenas que suenas que suenas que suenas que suenas
+Suenas que suenas que suenas que suenas que suenas que suenas que suenas...
+GAMEOVER
+-
+6
+Tomar el camino bueno
+"JA! Iluso! El escritor de esta aventura tenia razon cuando dijo que eras la persona
+mas credula del mundo!" El camino bueno termino siendo malo. Tu cabeza esta llena de tantas
+bobadas, que explota.
+GAMEOVER
+-
+6
+Tomar el camino malo
+"Muy bien, viste a traves de mi ruin mentira. Este era el camino bueno realmente."
+Feliz de haber escapado de este interminable juego, decides dejar de lado el computador 
+y salir a caminar. O por lo menos eso deberias hacer. Ya no puedo controlar lo que
+haces porque ya no eres un personaje de ficcion, sino una persona real que tiene cosas que 
+hacer y gente que ver.
+WINNER
+-
