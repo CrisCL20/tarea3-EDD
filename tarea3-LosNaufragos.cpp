@@ -1,40 +1,47 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 
 using namespace std;
 
-struct nodo{ string data; nodo* sig; };
-typedef nodo* ptn;
 
-struct arco{ ptn u,v; };
-typedef arco* pta;
+struct grafo{ string descripcion;
+              string* decisiones;
+              int cantidad_caminos;
+              bool gameover; 
+              grafo** opciones; };
+typedef grafo* ptg;
 
-pta crear_arco(ptn,ptn);
-void printarco(pta);
-
-int main(int argc, char* argv[]){
-	int n; //
-	(void)argc;
-	char **input=new char[n];
-	ptn node = new nodo;
-	pta edge = new arco;
-	ifstream file(argv[1]);	
-	if(!file.is_open()) exit(EXIT_FAILURE);
-	while(file >> input){
-	}
-
+ptg crearnodo(string desc_nodo){
+    ptg aux = new grafo;
+    aux->descripcion=desc_nodo;
+    aux->decisiones = NULL;
+    aux->opciones=NULL;
+    return aux;
 }
 
-pta crear_arco(ptn nodo1, ptn nodo2){
-	pta arc = new arco;
-	while(nodo1!=NULL && nodo2!=NULL){
-		nodo1->sig=nodo2;
-		arc->u=nodo1;
-		arc->v=nodo2;
-	}
-	return arc;
+void agregarcaminos(ptg &nodo, int cantidad, string* desc,string* deci){
+    nodo->decisiones=deci;
+    nodo->cantidad_caminos=cantidad;
+    int** lista_opciones = new int*[cantidad]; 
+    for(int i=0;i<cantidad;i++){
+        crearnodo(desc[i]);
+    }
+    nodo->opciones=lista_opciones;
 }
 
-void printarco(pta arc){
-	while(arc!=NULL) cout << arc->u->data << " " << arc->v->data << endl;
+void escoger_camino(ptg nodo){
+    cout << nodo->descripcion << endl;
+    for (int i = 0; i < nodo->cantidad_caminos; i++) cout << i++ << nodo->decisiones[i]<<endl;
+    if(nodo->opciones==NULL){
+        string x;
+        cin >> x;
+    }
+    else{
+        int camino;
+        cin >> camino;
+        escoger_camino(nodo->opciones[camino])
+    }
+    if(nodo->gameover) return;
+    
 }
