@@ -60,7 +60,7 @@ void agregarcaminos(ptg &nodo, int cantidad, string* desc,string* deci){
 
 void escoger_camino(ptg nodo){
     cout << nodo->descripcion << endl;
-    for (int i = 0; i < nodo->cantidad_caminos; i++) cout << i++ << ") " << nodo->decisiones[i]<<endl;
+    for (int i = 0; i < nodo->cantidad_caminos; i++) cout /*<< i++ << ") " */<< nodo->decisiones[i]<<endl;
     if(nodo->opciones==NULL){
         string x;
         cin >> x;
