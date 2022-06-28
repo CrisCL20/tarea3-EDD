@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#define N 1000
 
 using namespace std;
 
@@ -17,14 +18,25 @@ typedef grafo* ptg;
 
 int main(int argc, char* argv[]){
     (void)argc;
-    ifstream file(argv[1]);
-    string line;
+    string line; 
+    string description="";
+    int n=line.size();
+    
     ptg graph = new grafo;
+    
+    ifstream file(argv[1]);
+    
+
     if(!file.is_open()) exit(EXIT_FAILURE);
     while(file.peek()!=EOF){
         getline(file,line);
         if(line=="-") continue;
-        else if(line.size()>=50) graph->descripcion=line;
+        else if(n>=50){
+            for(int i=0;i<N;i++) description += line;
+            graph->descripcion=description;
+        }
+        else if(n<50 && n>15) graph->aventura=line;
+        else if(line=="START" || n==1) graph->nodo=line;
     }
 
 }
