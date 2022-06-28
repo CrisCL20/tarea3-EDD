@@ -19,7 +19,6 @@ typedef grafo* ptg;
 int main(int argc, char* argv[]){
     (void)argc;
     string line; 
-    string description="";
     int n=line.size();
     
     ptg graph = new grafo;
@@ -32,6 +31,7 @@ int main(int argc, char* argv[]){
         getline(file,line);
         if(line=="-") continue;
         else if(n>=50){
+            string description="";
             for(int i=0;i<N;i++) description += line;
             graph->descripcion=description;
         }
