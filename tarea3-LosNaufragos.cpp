@@ -41,12 +41,11 @@ int main(int argc, char* argv[]){
 
 }
 
-ptg crearnodo(string desc_nodo){
-    ptg aux = new grafo;
-    aux->descripcion=desc_nodo;
-    aux->decisiones = NULL;
-    aux->opciones=NULL;
-    return aux;
+ptg crearnodo(ptg &graph,string desc_nodo){
+    graph->descripcion=desc_nodo;
+    graph->decisiones = NULL;
+    graph->opciones=NULL;
+    return graph;
 }
 
 void agregarcaminos(ptg &nodo, int cantidad, string* desc,string* deci){
@@ -54,7 +53,7 @@ void agregarcaminos(ptg &nodo, int cantidad, string* desc,string* deci){
     nodo->cantidad_caminos=cantidad;
     ptg* lista_opciones = new ptg[cantidad]; 
     for(int i=0;i<cantidad;i++){
-        crearnodo(desc[i]);
+        crearnodo(nodo, desc[i]);
     }
     nodo->opciones=lista_opciones;
 }
