@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 #define N 1000
 
 using namespace std;
@@ -16,60 +17,28 @@ struct grafo{
               grafo** opciones; };
 typedef grafo* ptg;
 
+void printgraph(ptg);
+bool contains(string, char);
+
 int main(int argc, char* argv[]){
     (void)argc;
     string line; 
-    int n=line.size();
-    
-    ptg graph = new grafo;
-    
+	//vector<string> description;
+	string desc = "";
+    //ptg graph = new grafo;
     ifstream file(argv[1]);
     
 
     if(!file.is_open()) exit(EXIT_FAILURE);
     while(file.peek()!=EOF){
         getline(file,line);
-        if(line=="-") continue;
-        else if(n>=50){
-            string description="";
-            for(int i=0;i<N;i++) description += line;
-            graph->descripcion=description;
-        }
-        else if(n<50 && n>15) graph->aventura=line;
-        else if(line=="START" || n==1) graph->nodo=line;
-    }
-
+		if(!contains(line,'-') && line.size()>N/100) desc += line;
+	}
 }
 
-ptg crearnodo(ptg &graph,string desc_nodo){
-    graph->descripcion=desc_nodo;
-    graph->decisiones = NULL;
-    graph->opciones=NULL;
-    return graph;
+bool contains(string s, char c){
+	if(s.find(c) != string::npos) return true;
+	return false;
 }
 
-void agregarcaminos(ptg &nodo, int cantidad, string* desc,string* deci){
-    nodo->decisiones=deci;
-    nodo->cantidad_caminos=cantidad;
-    ptg* lista_opciones = new ptg[cantidad]; 
-    for(int i=0;i<cantidad;i++){
-        crearnodo(nodo, desc[i]);
-    }
-    nodo->opciones=lista_opciones;
-}
 
-void escoger_camino(ptg nodo){
-    cout << nodo->descripcion << endl;
-    for (int i = 0; i < nodo->cantidad_caminos; i++) cout /*<< i++ << ") " */<< nodo->decisiones[i]<<endl;
-    if(nodo->opciones==NULL){
-        string x;
-        cin >> x;
-    }
-    else{
-        int camino;
-        cin >> camino;
-        escoger_camino(nodo->opciones[camino]);
-    }
-    if(nodo->gameover) return;
-    
-}
