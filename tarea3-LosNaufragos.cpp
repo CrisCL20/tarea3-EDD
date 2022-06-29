@@ -32,7 +32,7 @@ int main(int argc, char* argv[]){
     if(!file.is_open()) exit(EXIT_FAILURE);
     while(file.peek()!=EOF){
         getline(file,line);
-		if(!contains(line,'-') && line.size()>N/100) desc += line;
+	if(!contains(line,'-') && line.size()>N/100) desc += line;
 	}
 }
 
