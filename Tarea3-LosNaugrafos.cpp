@@ -145,7 +145,7 @@ struct Sistema
 			{
 				while (opcion != "1")
 				{
-					system("cls");
+					system("clear");
 					cout << despliegue;
 					cout << "1 - " << raiz->izquierda->claveSala << "\n";
 					getline(cin, opcion);
@@ -156,7 +156,7 @@ struct Sistema
 			{
 				while (opcion != "1")
 				{
-					system("cls");
+					system("clear");
 					cout << despliegue;
 					cout << "1 - " << raiz->derecha->claveSala << "\n";
 					getline(cin, opcion);
